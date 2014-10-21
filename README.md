@@ -46,18 +46,18 @@ This section details "quick deployment" steps.
 
 1. Clone this repository from GitHub:
 
-        $ git clone git@github.com:jellyfish/manageiq-cookbook.git
+        $ git clone git@github.com:booz-allen-hamilton/chef-manageiq.git
 
 2. Change directory to the repo folder
 
-        $ cd manageiq-cookbook
+        $ cd chef-manageiq
 
 3. Create a solo.rb file
 
 		$ vim solo.rb
 
-			file_cache_path "/root/dpi-chef"
-			cookbook_path "/root/dpi-chef/cookbooks"
+			file_cache_path "/root/chef-repo"
+			cookbook_path "/root/chef-repo/cookbooks"
 
 
 4. Install dependencies:

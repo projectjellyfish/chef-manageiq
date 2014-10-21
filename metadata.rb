@@ -1,10 +1,11 @@
-name             'manageiq'
-maintainer       'Mandeep Bal'
-maintainer_email 'bal_mandeep@bah.com'
-license          'All rights reserved'
+name             'chef-manageiq'
+maintainer       'Booz Allen Hamilton'
+maintainer_email 'jellyfishopensource@bah.com'
+license          'GPL v2'
 description      'Installs/Configures ManageIQ'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
+supports         'rhel'
 
 depends "yum"
 depends "yum-epel"
