@@ -222,13 +222,13 @@ execute "untar-miq-automate" do
 end
 
 #Import BAH Miq Automate Code
-rvm_shell "miq vmdb rake evm automate import BAH code" do
-  ruby_string "1.9.3"
-  user        "miqbuilder"
-  group       "miqbuilder"
-  cwd         "/opt/manageiq/vmdb"
-  code        %{bin/rake evm:automate:import DOMAIN=BAH IMPORT_DIR=/tmp/domains PREVIEW=false IMPORT_AS=BAH}
-end
+#rvm_shell "miq vmdb rake evm automate import BAH code" do
+#  ruby_string "1.9.3"
+#  user        "miqbuilder"
+#  group       "miqbuilder"
+#  cwd         "/opt/manageiq/vmdb"
+#  code        %{bin/rake evm:automate:import DOMAIN=BAH IMPORT_DIR=/tmp/domains PREVIEW=false IMPORT_AS=BAH}
+#end
 
 # Setup IPTABLES to allow access via web
 iptables_rule "manageiq"
