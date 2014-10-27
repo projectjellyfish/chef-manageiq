@@ -4,7 +4,7 @@ default["manageiq"]["db_username"] = "evm"
 default['manageiq']['db_password'] = "P@$$1234"
 
 # URL for manageiq code repo
-default['manageiq']['code_repo'] = "https://github.com/mandeep170/manageiq"
+default['manageiq']['code_repo'] = "https://github.com/booz-allen-hamilton/manageiq"
 
 #RVM setup for miqbuilder
 default['rvm']['user_installs'] = [
@@ -13,7 +13,7 @@ default['rvm']['user_installs'] = [
 ]
 
 # Automate Code Attributes
-# default['manageiq']['automate_code_url'] = "https://s3.amazonaws.com/dpi-releases/domains20141020.tar.gz"
+# default['manageiq']['automate_code_url'] = "https://s3.amazonaws.com/dpi-releases/BAHdatastore_20141024.zip"
 # default['manageiq']['automate_code_domain'] = "BAH"
 
 # PostgreSQL Attributes
