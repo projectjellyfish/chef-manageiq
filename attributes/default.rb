@@ -1,7 +1,7 @@
 # General Attributes for ManageIQ cookbook
 # DB user definition
 default["manageiq"]["db_username"] = "evm"
-default['manageiq']['db_password'] = "P@$$1234"
+default['manageiq']['db_password'] = "password"
 
 # URL for manageiq code repo
 default['manageiq']['code_repo'] = "https://github.com/booz-allen-hamilton/manageiq"
