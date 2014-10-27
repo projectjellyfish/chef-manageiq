@@ -13,8 +13,8 @@ default['rvm']['user_installs'] = [
 ]
 
 # Automate Code Attributes
-# default['manageiq']['automate_code_url'] = "https://s3.amazonaws.com/dpi-releases/BAHdatastore_20141024.zip"
-# default['manageiq']['automate_code_domain'] = "BAH"
+default['manageiq']['automate_code_url'] = "https://s3.amazonaws.com/dpi-releases/BAHdatastore_20141024.zip"
+default['manageiq']['automate_code_domain'] = "BAH"
 
 # PostgreSQL Attributes
 default['postgresql']['password']['postgres'] = node['manageiq']['db_password']
