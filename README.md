@@ -37,7 +37,7 @@ Attributes
 
 Usage
 -----
-Simply add `role[manageiq]` to a run list.
+Simply add the cookbook to your runlist or add the cookbook to a role you have created.
 
 
 Deploying a ManageIQ Server
