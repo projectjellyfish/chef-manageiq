@@ -60,7 +60,7 @@ This section details "quick deployment" steps.
 
           $ vi /tmp/chef/solo.rb
          
-               file_cache_path "/tmp/chef/roles"
+               file_cache_path "/tmp/chef/"
                cookbook_path "/tmp/chef/cookbooks"
 
 4. Create a manageiq.json file, this will be the attributes file and contains the run_list
