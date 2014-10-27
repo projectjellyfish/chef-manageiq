@@ -1,9 +1,8 @@
-# 0.1.0
+chef-manageiq CHANGELOG
+=========================
 
-Initial release of manageiq
+This file is used to list changes made in each version of the chef-manageiq cookbook.
 
-* Enhancements
-  * an enhancement
-
-* Bug Fixes
-  * a bug fix
+0.1.0
+-----
+- [BoozAllen] - Initial release of chef-manageiq
