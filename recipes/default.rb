@@ -208,27 +208,25 @@ rvm_shell "miq vmdb rake evm start" do
   code        %{bin/rake evm:start}
 end
 
-bah_miq_automate_latest = "/tmp/bah-automate-latest.tar.gz"
-
-# Get the BAH MIQ automate code
-remote_file 'get-automate-code' do
-  path bah_miq_automate_latest
-  source node['manageiq']['automate_code_url']
-  mode "0644"
+#save the file to the /tmp directory
+cookbook_file "get-bah-automate-code-from-chef-cookbookfile" do
+  path "/tmp/" + node['manageiq']['bah_miq_automate_latest']
+  action :create_if_missing
 end
 
+#untar the file
 execute "untar-miq-automate" do
-  command "tar -zxf " + bah_miq_automate_latest + " -C /tmp"
+  command "tar -zxf /tmp/" + node['manageiq']['bah_miq_automate_latest'] + " -C /tmp --strip-components 2"
 end
 
 #Import BAH Miq Automate Code
-#rvm_shell "miq vmdb rake evm automate import BAH code" do
-#  ruby_string "1.9.3"
-#  user        "miqbuilder"
-#  group       "miqbuilder"
-#  cwd         "/opt/manageiq/vmdb"
-#  code        %{bin/rake evm:automate:import DOMAIN=BAH IMPORT_DIR=/tmp/domains PREVIEW=false IMPORT_AS=BAH}
-#end
+rvm_shell "miq vmdb rake evm automate import BAH code" do
+  ruby_string "1.9.3"
+  user        "miqbuilder"
+  group       "miqbuilder"
+  cwd         "/opt/manageiq/vmdb"
+  code        %{bin/rake evm:automate:import DOMAIN=BAH IMPORT_DIR=/tmp/domains PREVIEW=false IMPORT_AS=BAH}
+end
 
 # Setup IPTABLES to allow access via web
 iptables_rule "manageiq"
