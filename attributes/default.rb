@@ -3,15 +3,17 @@
 # DB user definition
 default['manageiq']['db_username']  = "evm"
 default['manageiq']['db_password']  = "password"
+default['manageiq']['ruby'] = "ruby-1.9.3-p551"
 
 # URL for manageiq code repo
 default['manageiq']['code_repo']    = "https://github.com/booz-allen-hamilton/manageiq"
 
-#RVM setup for miqbuilder
+# RVM setup for miqbuilder
 default['rvm']['user_installs']     = [{'user' => 'miqbuilder'}]
 
 # Name of the BAH miq automate code file located in the cookbook files directory
-default['manageiq']['bah_miq_automate_latest'] = "BAHdatastore_20141024.tar.gz"
+default['manageiq']['automate_import'] = ''
+default['manageiq']['domain'] = ''
 
 # PostgreSQL Attributes
 default['postgresql']['password']['postgres']       = node['manageiq']['db_password']
