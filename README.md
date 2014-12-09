@@ -47,18 +47,18 @@ This section details "quick deployment" steps.
 1. Install Chef Client
 
 
-          $ curl -L https://www.opscode.com/chef/install.sh | sudo bash
+          curl -L https://www.opscode.com/chef/install.sh | sudo bash
 
 2. Create a Chef repo folder and a cookbooks folder under the /tmp directory
 
 
-          $ mkdir -p /tmp/chef/cookbooks
-          $ cd /tmp/chef/
+          mkdir -p /tmp/chef/cookbooks
+          cd /tmp/chef/
 
 3. Create a solo.rb file
 
 
-          $ vi /tmp/chef/solo.rb
+          vi /tmp/chef/solo.rb
          
                file_cache_path "/tmp/chef/"
                cookbook_path "/tmp/chef/cookbooks"
@@ -66,7 +66,7 @@ This section details "quick deployment" steps.
 4. Create a manageiq.json file, this will be the attributes file and contains the run_list
 
 
-          $ vi /tmp/chef/manageiq.json
+          vi /tmp/chef/manageiq.json
         
                 {
                   "run_list": [
@@ -77,116 +77,116 @@ This section details "quick deployment" steps.
 
 4. Install dependencies:
 
-        $ cd /tmp/chef/cookbooks
+        cd /tmp/chef/cookbooks
         
-        $ knife cookbook site download postgresql
-        $ tar xvfz postgresql-*.tar.gz
-        $ rm -f postgresql-*.tar.gz
+        knife cookbook site download postgresql
+        tar xvfz postgresql-*.tar.gz
+        rm -f postgresql-*.tar.gz
          
-        $ knife cookbook site download iptables
-        $ tar xvfz iptables-*.tar.gz
-        $ rm -f iptables-*.tar.gz
+        knife cookbook site download iptables
+        tar xvfz iptables-*.tar.gz
+        rm -f iptables-*.tar.gz
          
-        $ knife cookbook site download database
-        $ tar xvfz database-*.tar.gz
-        $ rm -f database-*.tar.gz
+        knife cookbook site download database
+        tar xvfz database-*.tar.gz
+        rm -f database-*.tar.gz
          
-        $ knife cookbook site download rvm
-        $ tar xvfz rvm-*.tar.gz
-        $ rm -f rvm-*.tar.gz
+        knife cookbook site download rvm
+        tar xvfz rvm-*.tar.gz
+        rm -f rvm-*.tar.gz
          
-        $ knife cookbook site download xml
-        $ tar xvfz xml-*.tar.gz
-        $ rm -f xml-*.tar.gz
+        knife cookbook site download xml
+        tar xvfz xml-*.tar.gz
+        rm -f xml-*.tar.gz
          
-        $ knife cookbook site download git
-        $ tar xvfz git-*.tar.gz
-        $ rm -f git-*.tar.gz
+        knife cookbook site download git
+        tar xvfz git-*.tar.gz
+        rm -f git-*.tar.gz
          
-        $ knife cookbook site download ntp
-        $ tar xvfz ntp-*.tar.gz
-        $ rm -f ntp-*.tar.gz
+        knife cookbook site download ntp
+        tar xvfz ntp-*.tar.gz
+        rm -f ntp-*.tar.gz
          
-        $ knife cookbook site download memcached
-        $ tar xvfz memcached-*.tar.gz
-        $ rm -f memcached-*.tar.gz
+        knife cookbook site download memcached
+        tar xvfz memcached-*.tar.gz
+        rm -f memcached-*.tar.gz
          
-        $ knife cookbook site download yum
-        $ tar xvfz yum-*.tar.gz
-        $ rm -f yum-*.tar.gz
+        knife cookbook site download yum
+        tar xvfz yum-*.tar.gz
+        rm -f yum-*.tar.gz
              
-        $ knife cookbook site download yum-epel
-        $ tar xvfz yum-epel-*.tar.gz
-        $ rm -f yum-epel-*.tar.gz
+        knife cookbook site download yum-epel
+        tar xvfz yum-epel-*.tar.gz
+        rm -f yum-epel-*.tar.gz
          
-        $ knife cookbook site download openssl
-        $ tar xvfz openssl-*.tar.gz
-        $ rm -f openssl-*.tar.gz
+        knife cookbook site download openssl
+        tar xvfz openssl-*.tar.gz
+        rm -f openssl-*.tar.gz
          
-        $ knife cookbook site download chef-sugar
-        $ tar xvfz chef-sugar-*.tar.gz
-        $ rm -f chef-sugar-*.tar.gz
+        knife cookbook site download chef-sugar
+        tar xvfz chef-sugar-*.tar.gz
+        rm -f chef-sugar-*.tar.gz
          
-        $ knife cookbook site download build-essential
-        $ tar xvfz build-essential-*.tar.gz
-        $ rm -f build-essential-*.tar.gz
+        knife cookbook site download build-essential
+        tar xvfz build-essential-*.tar.gz
+        rm -f build-essential-*.tar.gz
         
-        $ knife cookbook site download apt
-        $ tar xvfz apt-*.tar.gz
-        $ rm -f apt-*.tar.gz
+        knife cookbook site download apt
+        tar xvfz apt-*.tar.gz
+        rm -f apt-*.tar.gz
 
-        $ knife cookbook site download aws
-        $ tar xvfz aws-*.tar.gz
-        $ rm -f aws-*.tar.gz
+        knife cookbook site download aws
+        tar xvfz aws-*.tar.gz
+        rm -f aws-*.tar.gz
 
-        $ knife cookbook site download mysql
-        $ tar xvfz mysql-*.tar.gz
-        $ rm -f mysql-*.tar.gz
+        knife cookbook site download mysql
+        tar xvfz mysql-*.tar.gz
+        rm -f mysql-*.tar.gz
         
-        $ knife cookbook site download yum-mysql-community
-        $ tar xvfz yum-mysql-community-*.tar.gz
-        $ rm -f yum-mysql-community-*.tar.gz
+        knife cookbook site download yum-mysql-community
+        tar xvfz yum-mysql-community-*.tar.gz
+        rm -f yum-mysql-community-*.tar.gz
 
-        $ knife cookbook site download mysql-chef_gem
-        $ tar xvfz mysql-chef_gem-*.tar.gz
-        $ rm -f mysql-chef_gem-*.tar.gz
+        knife cookbook site download mysql-chef_gem
+        tar xvfz mysql-chef_gem-*.tar.gz
+        rm -f mysql-chef_gem-*.tar.gz
 
-        $ knife cookbook site download xfs
-        $ tar xvfz xfs-*.tar.gz
-        $ rm -f xfs-*.tar.gz
+        knife cookbook site download xfs
+        tar xvfz xfs-*.tar.gz
+        rm -f xfs-*.tar.gz
 
-        $ knife cookbook site download dmg
-        $ tar xvfz dmg-*.tar.gz
-        $ rm -f dmg-*.tar.gz
+        knife cookbook site download dmg
+        tar xvfz dmg-*.tar.gz
+        rm -f dmg-*.tar.gz
 
-        $ knife cookbook site download runit
-        $ tar xvfz runit-*.tar.gz
-        $ rm -f runit-*.tar.gz
+        knife cookbook site download runit
+        tar xvfz runit-*.tar.gz
+        rm -f runit-*.tar.gz
         
-        $ knife cookbook site download windows
-        $ tar xvfz windows-*.tar.gz
-        $ rm -f windows-*.tar.gz     
+        knife cookbook site download windows
+        tar xvfz windows-*.tar.gz
+        rm -f windows-*.tar.gz     
         
-        $ knife cookbook site download chef_handler
-        $ tar xvfz chef_handler-*.tar.gz
-        $ rm -f chef_handler-*.tar.gz        
+        knife cookbook site download chef_handler
+        tar xvfz chef_handler-*.tar.gz
+        rm -f chef_handler-*.tar.gz        
         
-        $ knife cookbook site download chef_gem
-        $ tar xvfz chef_gem-*.tar.gz
-        $ rm -f chef_gem-*.tar.gz    
+        knife cookbook site download chef_gem
+        tar xvfz chef_gem-*.tar.gz
+        rm -f chef_gem-*.tar.gz    
         
 6. Download and extract the cookbook:
 
-          $ yum install -y wget
-          $ wget https://github.com/booz-allen-hamilton/chef-manageiq/archive/master.tar.gz
-          $ tar xvfz master.tar.gz 
-          $ rm -rf master.tar.gz 
-          $ mv chef-manageiq-master/ chef-manageiq
+          yum install -y wget
+          wget https://github.com/booz-allen-hamilton/chef-manageiq/archive/master.tar.gz
+          tar xvfz master.tar.gz 
+          rm -rf master.tar.gz 
+          mv chef-manageiq-master/ chef-manageiq
     
 7. Run Chef-solo:
 
-          $ cd /tmp/chef
-          $ chef-solo -c solo.rb -j manageiq.json
+          cd /tmp/chef
+          chef-solo -c solo.rb -j manageiq.json
 
 License & Authors
 -----------------
