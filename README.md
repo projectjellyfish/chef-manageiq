@@ -79,6 +79,10 @@ This section details "quick deployment" steps.
 
         cd /tmp/chef/cookbooks
         
+        knife cookbook site download sudo
+        tar xvfz sudo-*.tar.gz
+        rm -f sudo-*.tar.gz        
+        
         knife cookbook site download postgresql
         tar xvfz postgresql-*.tar.gz
         rm -f postgresql-*.tar.gz
