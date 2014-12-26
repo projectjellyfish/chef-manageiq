@@ -3,7 +3,7 @@
 # DB user definition
 default['manageiq']['db_username']  = "evm"
 default['manageiq']['db_password']  = "password"
-default['manageiq']['ruby'] = "ruby-1.9.3-p551"
+default['manageiq']['ruby'] = "2.0.0"
 
 # URL for manageiq code repo
 default['manageiq']['code_repo']    = "https://github.com/booz-allen-hamilton/manageiq"
