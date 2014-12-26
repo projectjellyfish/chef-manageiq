@@ -107,25 +107,10 @@ rvm_ruby node['manageiq']['ruby'] do
   action  :install
 end
 
-#Make Ruby 1.9.3 the default ruby
+#Make Ruby 2.0.0 the default ruby
 rvm_default_ruby node['manageiq']['ruby'] do
   user    "miqbuilder"
   action :create
-end
-
-#Force uninstall bundler because we need a specific version
-execute "force uninstall bundler" do
-  user    "miqbuilder"
-  command "gem uninstall -i /home/miqbuilder/.rvm/gems/#{node['manageiq']['ruby']}@global bundler"
-  action :run
-end
-
-#Install Bundler
-rvm_gem "bundler" do
-  user    "miqbuilder"
-  ruby_string node['manageiq']['ruby']
-  version     "1.3.5"
-  action      :install
 end
 
 execute "updateperms" do
