@@ -2,9 +2,7 @@
 # Cookbook Name:: manageiq
 # Recipe:: default
 #
-# Copyright (C) 2014 Mandeep Bal
-#
-# Some rights reserved -  Please Distribute
+# Copyright (C) 2015 Booz Allen Hamilton
 #
 
 include_recipe "git"
@@ -203,4 +201,3 @@ end
 
 # Setup IPTABLES to allow access via web
 iptables_rule "manageiq"
-iptables_rule "servicemix"

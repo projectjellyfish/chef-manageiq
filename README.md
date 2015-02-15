@@ -198,7 +198,7 @@ License & Authors
 - Author:: Mandeep Bal
 
 ```text
-Copyright:: 2014, Booz Allen Hamilton
+Copyright:: 2015, Booz Allen Hamilton
 
-For more information on the license, please refer to the LICENSE.txt file in the repo
+For more information on the license, please refer to the LICENSE file in the repo
 ```

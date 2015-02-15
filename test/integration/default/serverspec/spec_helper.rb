@@ -1,3 +1,10 @@
+#
+# Cookbook Name:: manageiq
+# Recipe:: default
+#
+# Copyright (C) 2015 Booz Allen Hamilton
+#
+
 require 'serverspec'
 
 # Required by serverspec

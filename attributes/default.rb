@@ -1,4 +1,9 @@
-# General Attributes for ManageIQ cookbook
+#
+# Cookbook Name:: manageiq
+# Recipe:: default
+#
+# Copyright (C) 2015 Booz Allen Hamilton
+#
 
 # DB user definition
 default['manageiq']['db_username']  = "evm"
@@ -6,7 +11,7 @@ default['manageiq']['db_password']  = "password"
 default['manageiq']['ruby'] = "2.0.0"
 
 # URL for manageiq code repo
-default['manageiq']['code_repo']    = "https://github.com/booz-allen-hamilton/manageiq"
+default['manageiq']['code_repo']    = "https://github.com/ManageIQ/manageiq"
 
 # RVM setup for miqbuilder
 default['rvm']['user_installs']     = [{'user' => 'miqbuilder'}]
